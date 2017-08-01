@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Report</title>
+<link type="text/css" rel="stylesheet" href="images/style_patient/css/green.css" />
+<link type="text/css" rel="stylesheet" href="images/style_patient/css/print.css" media="print"/>
+<!--[if IE 7]>
+<link href="css/ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script>
+var url      = window.location.href;
+function myFunction() {
+    document.getElementById("myAnchor").href = "http://api.html2pdfrocket.com/pdf?value="+url+"&apikey=abe1e5fc-84d8-4bc2-b76f-40c6144d7cd1";
+    
+
+}
+</script>
+<script type="text/javascript" src="images/style_patient/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="images/style_patient/js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="images/style_patient/js/cufon.yui.js"></script>
+<script type="text/javascript" src="images/style_patient/js/scrollTo.js"></script>
+<script type="text/javascript" src="images/style_patient/js/myriad.js"></script>
+<script type="text/javascript" src="images/style_patient/js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="images/style_patient/js/custom.js"></script>
+<script type="text/javascript">
+		Cufon.replace('h1,h2');
+</script>
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <div class="wrapper-top"></div>
+  <div class="wrapper-mid">
+    <!-- Begin Paper -->
+    <div id="paper">
+      <div class="paper-top"></div>
+      <div id="paper-mid">
+        <div class="entry">
+          <!-- Begin Image -->
+          <img class="portrait" src="images/style_patient/images/image.jpg" alt="John Smith" />
+          <!-- End Image -->
+          <!-- Begin Personal Information -->
+          <div class="self">
+            <h1 class="name">Patient ID - <% if(user){ %><%=user.patient_id%><% } else { %>error<%}%><br />
+              <span></span></h1>
+            <ul>
+              <li class="tel">Name - <% if(user){ %><%=user.firstname%> <%=user.lastname%><% } else { %>error<%}%></li>
+              <li class="ad">Date - <% if(user){ %><%=user.date%><% } else { %>error<%}%></li>
+              <li class="mail">Time - <% if(user){ %><%=user.time%><% } else { %>error<%}%></li>
+              
+              <li class="web">www.businessweb.com</li>
+            </ul>
+          </div>
+          <!-- End Personal Information -->
+          <!-- Begin Social -->
+          <div class="social">
+            <ul>
+              <button onclick="myFunction()"><li><a id="myAnchor" class='north' href="http://www.web2pdfconvert.com/convert" title="Download .pdf"><img src="images/style_patient/images/icn-save.jpg" alt="Download the pdf version" /></a></li></button>
+              
+            </ul>
+          </div>
+          <!-- End Social -->
+        </div>
+        <!-- Begin 1st Row -->
+        <div class="entry">
+          <h2>Nature of Problem & Medication</h2>
+          <p><% if(user){ %><%=user.problem%><% } else { %>error<%}%></p>
+        </div>
+        <!-- End 1st Row -->
+        <!-- Begin 2nd Row -->
+        <div class="entry">
+          <h2>Injection Name</h2>
+          <div class="content">
+            <h3></h3>
+            <p><% if(user){ %><%=user.injection_name%><% } else { %>error<%}%><br />
+              <em></em></p>
+          </div>
+         
+        </div>
+        <!-- End 2nd Row -->
+        <!-- Begin 3rd Row -->
+        <div class="entry">
+          <h2>Other Medication</h2>
+          <div class="content">
+            <h3>Injection</h3>
+            <p><% if(user){ %><%=user.injection_yes%><% } else { %>error<%}%><br />
+           
+          </div>
+          <div class="content">
+            <h3>Dressing</h3>
+            <p><% if(user){ %><%=user.dressing_yes%><% } else { %>error<%}%><br />
+              
+          </div>
+        </div>
+        <!-- End 3rd Row -->
+        <!-- Begin 4th Row -->
+        
+         
+        <!-- End 4th Row -->
+         <!-- Begin 5th Row -->
+        <!--<div class="entry">
+        <h2>WORKS</h2>
+        	<ul class="works">
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/2.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/3.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        		<li><a href="images/1.jpg" rel="gallery" title="Lorem ipsum dolor sit amet."><img src="images/image.jpg" alt="" /></a></li>
+        	</ul>
+        </div>-->
+        <!-- Begin 5th Row -->
+      </div>
+      <div class="clear"></div>
+      <div class="paper-bottom"></div>
+    </div>
+    <!-- End Paper -->
+  </div>
+  <div class="wrapper-bottom"></div>
+</div>
+<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
+<!-- End Wrapper -->
+</body>
+</html>
